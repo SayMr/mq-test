@@ -50,7 +50,7 @@ public class SendTopic {
 			// 得到消息生成者【发送者】
 			producer = session.createProducer(destination);
 			// 设置不持久化，此处学习，实际根据项目决定
-			producer.setDeliveryMode(DeliveryMode.PERSISTENT);
+			producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
 			// 构造消息，此处写死，项目就是参数，或者方法获取
 			sendMessage(session, producer);
 			session.commit();
